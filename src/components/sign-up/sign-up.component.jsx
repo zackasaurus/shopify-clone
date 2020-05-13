@@ -22,7 +22,6 @@ export class SignUp extends React.Component {
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
-    console.log(this.state);
     if (password !== confirmPassword) {
       alert(`passwords don't match`);
       return;
@@ -46,7 +45,6 @@ export class SignUp extends React.Component {
     }
   };
   render() {
-    console.log(this.state);
     const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className="sign-up">
