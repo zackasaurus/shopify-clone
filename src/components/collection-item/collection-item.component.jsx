@@ -5,7 +5,7 @@ import { addItem } from '../../redux/cart/cart.actions';
 
 import './collection-item.styles.scss';
 
-function CollectionItem({ item, addItem }) {
+const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
   return (
     <div className="collection-item">
@@ -22,7 +22,7 @@ function CollectionItem({ item, addItem }) {
       </CustomButton>
     </div>
   );
-}
+};
 
 const mapStateToProps = (state) => ({});
 
