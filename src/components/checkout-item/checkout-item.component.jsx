@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, memo } from 'react';
 import { connect } from 'react-redux';
 
 import './checkout-item.styles.scss';
@@ -8,7 +8,8 @@ import {
   removeItem,
 } from '../../redux/cart/cart.actions';
 
-export const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
+const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
+  console.log('RRR');
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <div className="checkout-item">
@@ -51,4 +52,4 @@ const mapDispatchToProps = (dispatch) => ({
   removeItem: (item) => dispatch(removeItem(item)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CheckoutItem);
+export default connect(null, mapDispatchToProps)(CheckoutItem);
